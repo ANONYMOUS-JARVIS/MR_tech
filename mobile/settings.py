@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-zi*f7$k-k)bd)pil&vljxt%efpr2k-pbe0ik%r23^l6l85cw6e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS =  ['.vercel.app', '.now.sh',"*"]
 
 
 # Application definition
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'mobile.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        "NAME": "MR",
+        "USER": "postgres",
+        "PASSWORD": "1234",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 

@@ -267,6 +267,7 @@ def Payment(request):
         print("sucessfull")
         payment_order.save()
         cart_list_orders= Orders_list_model.objects.get(order_list_user=request.user,order_list_ordered_checkbox=False)
+        print(request.user,"this data")
         user_data=Customer.objects.get(user=request.user)
         print(payment_order,"+",razorpay_order['id'],"+",payment_order.order_list_order_id,"+",settings.RAZOR_KEY_ID)
         callback_url='http://127.0.0.1:8000/main/handler/'

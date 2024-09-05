@@ -5,7 +5,7 @@ from django_countries.fields import CountryField
 
 class Customer(models.Model):
     user=models.OneToOneField(User,null=False,blank=False,on_delete=models.CASCADE)
-    mobile=models.IntegerField(null=False)
+    mobile=models.BigIntegerField(null=False)
     def __str__(self):
         return self.user.username
 class  Category(models.Model):
